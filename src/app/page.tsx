@@ -130,16 +130,20 @@ export default function PolicyCenter() {
   const t = content[language];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-red-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-md border-b-4 border-green-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3 md:gap-4">
               {/* University Logo */}
-              
+              <img 
+                src="/100.png" 
+                alt="Logo มหาวิทยาลัยราชภัฏมหาสารคาม" 
+                className="w-12 h-12 md:w-16 md:h-16 object-contain"
+              />
               {/* Shield Icon */}
-              <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-700 to-red-600 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-green-700 rounded-lg flex items-center justify-center">
                 <Shield className="w-6 h-6 md:w-10 md:h-10 text-white" />
               </div>
               <div className="text-center sm:text-left">
@@ -159,16 +163,19 @@ export default function PolicyCenter() {
       </header>
 
       {/* University Logo Section - Between Header and Content */}
-      <div className="bg-gradient-to-r from-green-700 via-white to-red-600 py-8 md:py-12">
+      <div className="bg-white border-b-2 border-gray-200 py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-10 flex flex-col items-center">
-            <img 
-              src="/100.png" 
-              alt="Logo มหาวิทยาลัยราชภัฏมหาสารคาม" 
-              className="w-32 h-32 md:w-48 md:h-48 object-contain mb-4"
-            />
+          <div className="flex flex-col items-center">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-green-100 rounded-full opacity-20"></div>
+              <img 
+                src="/100.png" 
+                alt="Logo มหาวิทยาลัยราชภัฏมหาสารคาม" 
+                className="relative w-32 h-32 md:w-48 md:h-48 object-contain mb-4"
+              />
+            </div>
             <div className="text-center">
-              <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-green-700 to-red-600 bg-clip-text text-transparent mb-2">
+              <h2 className="text-2xl md:text-3xl font-bold text-green-700 mb-2">
                 {language === 'th' ? 'มหาวิทยาลัยราชภัฏมหาสารคาม' : 'Rajabhat Maha Sarakham University'}
               </h2>
               <p className="text-base md:text-lg text-gray-600">
@@ -187,7 +194,7 @@ export default function PolicyCenter() {
           <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">{t.aboutDesc}</p>
           
           {/* What is PDPA */}
-          <div className="bg-gradient-to-r from-green-50 to-red-50 rounded-lg p-4 md:p-6 border border-green-200 mb-4">
+          <div className="bg-green-50 rounded-lg p-4 md:p-6 border border-green-200 mb-4">
             <h3 className="text-base md:text-lg font-bold text-gray-900 mb-3">
               {language === 'th' ? '🛡️ PDPA คืออะไร?' : '🛡️ What is PDPA?'}
             </h3>
@@ -200,33 +207,33 @@ export default function PolicyCenter() {
           </div>
 
           {/* Your Rights */}
-          <div className="bg-green-50 rounded-lg p-4 md:p-6 border border-green-200">
+          <div className="bg-blue-50 rounded-lg p-4 md:p-6 border border-blue-200">
             <h3 className="text-base md:text-lg font-bold text-gray-900 mb-3">
               {language === 'th' ? '✨ สิทธิ์พื้นฐานของคุณ' : '✨ Your Basic Rights'}
             </h3>
             <div className="grid sm:grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm text-gray-700">
               <div className="flex items-start gap-2">
-                <span className="text-green-600 mt-1">✓</span>
+                <span className="text-blue-600 mt-1">✓</span>
                 <span>{language === 'th' ? 'เข้าถึงและขอสำเนาข้อมูลของคุณ' : 'Access and obtain copies of your data'}</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-green-600 mt-1">✓</span>
+                <span className="text-blue-600 mt-1">✓</span>
                 <span>{language === 'th' ? 'แก้ไขข้อมูลให้ถูกต้องครบถ้วน' : 'Correct inaccurate or incomplete data'}</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-green-600 mt-1">✓</span>
+                <span className="text-blue-600 mt-1">✓</span>
                 <span>{language === 'th' ? 'ลบหรือทำลายข้อมูลส่วนบุคคล' : 'Delete or destroy personal data'}</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-green-600 mt-1">✓</span>
+                <span className="text-blue-600 mt-1">✓</span>
                 <span>{language === 'th' ? 'คัดค้านการใช้ข้อมูล' : 'Object to data processing'}</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-green-600 mt-1">✓</span>
+                <span className="text-blue-600 mt-1">✓</span>
                 <span>{language === 'th' ? 'ขอให้โอนย้ายข้อมูล' : 'Request data portability'}</span>
               </div>
               <div className="flex items-start gap-2">
-                <span className="text-green-600 mt-1">✓</span>
+                <span className="text-blue-600 mt-1">✓</span>
                 <span>{language === 'th' ? 'ถอนความยินยอม' : 'Withdraw consent'}</span>
               </div>
             </div>
@@ -242,7 +249,7 @@ export default function PolicyCenter() {
                 onClick={() => setActiveTab(key as any)}
                 className={`flex-1 min-w-[120px] md:min-w-[140px] px-3 md:px-4 py-3 md:py-4 font-medium transition-colors text-xs md:text-base whitespace-nowrap ${
                   activeTab === key
-                    ? 'bg-gradient-to-r from-green-700 to-red-600 text-white'
+                    ? 'bg-green-700 text-white'
                     : 'bg-white text-gray-600 hover:bg-gray-50'
                 }`}
               >
@@ -285,7 +292,7 @@ export default function PolicyCenter() {
                           <div className="flex flex-col sm:flex-row gap-3">
                             <button
                               onClick={() => handleDownload(policy.file)}
-                              className="flex items-center justify-center gap-2 px-4 md:px-5 py-2 md:py-2.5 bg-gradient-to-r from-green-700 to-red-600 hover:from-green-800 hover:to-red-700 text-white rounded-lg font-medium transition-colors shadow-md text-sm md:text-base"
+                              className="flex items-center justify-center gap-2 px-4 md:px-5 py-2 md:py-2.5 bg-green-700 hover:bg-green-800 text-white rounded-lg font-medium transition-colors shadow-md text-sm md:text-base"
                             >
                               <Download className="w-4 h-4" />
                               {language === 'th' ? 'ดาวน์โหลด PDF' : 'Download PDF'}
@@ -346,55 +353,55 @@ export default function PolicyCenter() {
                 </h3>
                 
                 {!formType ? (
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
                     <button
                       onClick={() => setFormType('access')}
-                      className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl hover:shadow-lg transition-all text-left border-2 border-blue-200"
+                      className="p-4 md:p-6 bg-green-50 rounded-xl hover:shadow-lg transition-all text-left border-2 border-green-200 hover:border-green-400"
                     >
-                      <FileText className="w-10 h-10 text-blue-600 mb-3" />
-                      <h4 className="font-bold text-gray-900 mb-2">
+                      <FileText className="w-8 h-8 md:w-10 md:h-10 text-green-700 mb-3" />
+                      <h4 className="font-bold text-gray-900 mb-2 text-sm md:text-base">
                         {language === 'th' ? 'ขอเข้าถึงข้อมูล' : 'Data Access Request'}
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs md:text-sm text-gray-600">
                         {language === 'th' ? 'ขอรับสำเนาข้อมูลส่วนบุคคลของคุณ' : 'Request a copy of your personal data'}
                       </p>
                     </button>
 
                     <button
                       onClick={() => setFormType('modify')}
-                      className="p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl hover:shadow-lg transition-all text-left border-2 border-green-200"
+                      className="p-4 md:p-6 bg-blue-50 rounded-xl hover:shadow-lg transition-all text-left border-2 border-blue-200 hover:border-blue-400"
                     >
-                      <FileCheck className="w-10 h-10 text-green-600 mb-3" />
-                      <h4 className="font-bold text-gray-900 mb-2">
+                      <FileCheck className="w-8 h-8 md:w-10 md:h-10 text-blue-700 mb-3" />
+                      <h4 className="font-bold text-gray-900 mb-2 text-sm md:text-base">
                         {language === 'th' ? 'ขอแก้ไขข้อมูล' : 'Data Correction Request'}
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs md:text-sm text-gray-600">
                         {language === 'th' ? 'แก้ไขข้อมูลที่ไม่ถูกต้องหรือไม่สมบูรณ์' : 'Correct inaccurate or incomplete data'}
                       </p>
                     </button>
 
                     <button
                       onClick={() => setFormType('delete')}
-                      className="p-6 bg-gradient-to-br from-red-50 to-red-100 rounded-xl hover:shadow-lg transition-all text-left border-2 border-red-200"
+                      className="p-4 md:p-6 bg-red-50 rounded-xl hover:shadow-lg transition-all text-left border-2 border-red-200 hover:border-red-400"
                     >
-                      <Shield className="w-10 h-10 text-red-600 mb-3" />
-                      <h4 className="font-bold text-gray-900 mb-2">
+                      <Shield className="w-8 h-8 md:w-10 md:h-10 text-red-700 mb-3" />
+                      <h4 className="font-bold text-gray-900 mb-2 text-sm md:text-base">
                         {language === 'th' ? 'ขอลบข้อมูล' : 'Data Deletion Request'}
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs md:text-sm text-gray-600">
                         {language === 'th' ? 'ขอลบหรือทำลายข้อมูลส่วนบุคคล' : 'Request deletion of personal data'}
                       </p>
                     </button>
 
                     <button
                       onClick={() => setFormType('complaint')}
-                      className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl hover:shadow-lg transition-all text-left border-2 border-purple-200"
+                      className="p-4 md:p-6 bg-orange-50 rounded-xl hover:shadow-lg transition-all text-left border-2 border-orange-200 hover:border-orange-400"
                     >
-                      <MessageSquare className="w-10 h-10 text-purple-600 mb-3" />
-                      <h4 className="font-bold text-gray-900 mb-2">
+                      <MessageSquare className="w-8 h-8 md:w-10 md:h-10 text-orange-700 mb-3" />
+                      <h4 className="font-bold text-gray-900 mb-2 text-sm md:text-base">
                         {language === 'th' ? 'แจ้งเหตุละเมิด' : 'Report Violation'}
                       </h4>
-                      <p className="text-sm text-gray-600">
+                      <p className="text-xs md:text-sm text-gray-600">
                         {language === 'th' ? 'แจ้งเหตุการละเมิดข้อมูลส่วนบุคคล' : 'Report data protection violations'}
                       </p>
                     </button>
@@ -481,7 +488,7 @@ export default function PolicyCenter() {
 
                       <button
                         type="submit"
-                        className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors shadow-md"
+                        className="w-full px-6 py-3 bg-green-700 hover:bg-green-800 text-white rounded-lg font-medium transition-colors shadow-md text-sm md:text-base"
                       >
                         {language === 'th' ? 'ส่งคำขอ' : 'Submit Request'}
                       </button>
@@ -498,34 +505,34 @@ export default function PolicyCenter() {
                   {language === 'th' ? 'ติดต่อเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล (DPO)' : 'Contact Data Protection Officer (DPO)'}
                 </h3>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border-2 border-blue-200">
-                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
-                      <User className="w-8 h-8 text-white" />
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="bg-green-50 rounded-xl p-4 md:p-6 border-2 border-green-200">
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-green-700 rounded-full flex items-center justify-center mb-4">
+                      <User className="w-6 h-6 md:w-8 md:h-8 text-white" />
                     </div>
-                    <h4 className="font-bold text-gray-900 mb-2">
+                    <h4 className="font-bold text-gray-900 mb-2 text-sm md:text-base">
                       {language === 'th' ? 'ศูนย์เทคโนโลยีดิจิทัลและนวัตกรรม' : 'Digital Technology and Innovation Center'}
                     </h4>
-                    <p className="text-sm text-gray-600 mb-4">
+                    <p className="text-xs md:text-sm text-gray-600 mb-4">
                       {language === 'th' ? 'เจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล' : 'Data Protection Officer'}
                     </p>
-                    <div className="space-y-2 text-sm text-gray-700">
+                    <div className="space-y-2 text-xs md:text-sm text-gray-700">
                       <div className="flex items-center gap-2">
-                        <Mail className="w-4 h-4 text-blue-600" />
+                        <Mail className="w-3 h-3 md:w-4 md:h-4 text-green-700" />
                         <div>
                           <div>cc@rmu.ac.th</div>
                           <div>cc@lives.rmu.ac.th</div>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Phone className="w-4 h-4 text-blue-600" />
+                        <Phone className="w-3 h-3 md:w-4 md:h-4 text-green-700" />
                         <div>
                           <div>+66 81-564-7994</div>
                           <div>+66 91-019-9179</div>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Globe className="w-4 h-4 text-blue-600" />
+                        <Globe className="w-3 h-3 md:w-4 md:h-4 text-green-700" />
                         <a href="https://cc.rmu.ac.th" target="_blank" rel="noopener noreferrer" className="hover:underline">
                           cc.rmu.ac.th
                         </a>
@@ -910,7 +917,7 @@ export default function PolicyCenter() {
         </div>
 
         {/* Contact Section */}
-        <div className="mt-8 md:mt-12 bg-gradient-to-r from-green-700 to-red-600 rounded-xl shadow-lg p-6 md:p-8 text-white">
+        <div className="mt-8 md:mt-12 bg-green-700 rounded-xl shadow-lg p-6 md:p-8 text-white">
           <h3 className="text-xl md:text-2xl font-bold mb-4">
             {language === 'th' ? 'ติดต่อสอบถาม' : 'Contact Us'}
           </h3>
@@ -924,19 +931,19 @@ export default function PolicyCenter() {
                   }
                 </strong>
               </p>
-              <p className="text-xs md:text-base text-blue-100">
+              <p className="text-xs md:text-base text-green-100">
                 {language === 'th' 
                   ? 'มหาวิทยาลัยราชภัฏมหาสารคาม' 
                   : 'Rajabhat Maha Sarakham University'
                 }
               </p>
-              <p className="text-xs md:text-base text-blue-100">
+              <p className="text-xs md:text-base text-green-100">
                 {language === 'th' 
                   ? 'เลขที่ 80 ถนนนครสวรรค์ ตำบลตลาด' 
                   : '80 Nakhon Sawan Road, Talad'
                 }
               </p>
-              <p className="text-xs md:text-base text-blue-100">
+              <p className="text-xs md:text-base text-green-100">
                 {language === 'th' 
                   ? 'อำเภอเมือง จังหวัดมหาสารคาม 44000' 
                   : 'Mueang, Maha Sarakham 44000'
@@ -949,14 +956,19 @@ export default function PolicyCenter() {
                   {language === 'th' ? 'ช่องทางการติดต่อ' : 'Contact Channels'}
                 </strong>
               </p>
-              <p className="text-xs md:text-base text-blue-100">
-                {language === 'th' ? 'โทรศัพท์' : 'Phone'}: +66 81-564-7994 , +66 91-019-9179
+              <p className="text-xs md:text-base text-green-100">
+                {language === 'th' ? 'โทรศัพท์' : 'Phone'}: +66 81-564-7994
               </p>
-             
-              <p className="text-xs md:text-base text-blue-100 mt-2">
-                {language === 'th' ? 'อีเมล' : 'Email'}: cc@rmu.ac.th , cc@lives.rmu.ac.th
+              <p className="text-xs md:text-base text-green-100 ml-8 md:ml-16">
+                +66 91-019-9179
               </p>
-              <p className="text-xs md:text-base text-blue-100 mt-2">
+              <p className="text-xs md:text-base text-green-100 mt-2">
+                {language === 'th' ? 'อีเมล' : 'Email'}: cc@rmu.ac.th
+              </p>
+              <p className="text-xs md:text-base text-green-100 ml-8 md:ml-12">
+                cc@lives.rmu.ac.th
+              </p>
+              <p className="text-xs md:text-base text-green-100 mt-2">
                 {language === 'th' ? 'เว็บไซต์' : 'Website'}: 
                 <a href="https://cc.rmu.ac.th" target="_blank" rel="noopener noreferrer" className="hover:underline ml-1">
                   cc.rmu.ac.th
@@ -1047,5 +1059,4 @@ export default function PolicyCenter() {
         </div>
       </footer>
     </div>
-  );
-}
+  );}

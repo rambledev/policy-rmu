@@ -1,10 +1,23 @@
+'use client'
+
 import React, { useState } from 'react';
 import { FileText, Download, Calendar, Shield, Book } from 'lucide-react';
 
 export default function PolicyCenter() {
-  const [selectedPolicy, setSelectedPolicy] = useState(null);
+  type Policy = {
+    id: string;
+    title: string;
+    year: string;
+    date: string;
+    type: string;
+    description: string;
+    file: string;
+    icon: React.ComponentType<{ className?: string }>;
+  };
 
-  const policies = [
+  const [selectedPolicy, setSelectedPolicy] = useState<Policy | null>(null);
+
+  const policies: Policy[] = [
     {
       id: 'p1',
       title: 'ข้อบังคับมหาวิทยาลัยราชภัฏมหาสารคาม ว่าด้วย ธรรมาภิบาลข้อมูลของมหาวิทยาลัย',
@@ -37,7 +50,7 @@ export default function PolicyCenter() {
     }
   ];
 
-  const handleDownload = (filename) => {
+  const handleDownload = (filename: string) => {
     // จำลองการดาวน์โหลดไฟล์
     alert(`กำลังดาวน์โหลด ${filename}\n\nในระบบจริง คุณต้องวางไฟล์ PDF ไว้ใน public/policies/${filename}`);
   };

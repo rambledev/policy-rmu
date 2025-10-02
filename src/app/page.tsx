@@ -950,16 +950,11 @@ export default function PolicyCenter() {
                 </strong>
               </p>
               <p className="text-xs md:text-base text-blue-100">
-                {language === 'th' ? 'โทรศัพท์' : 'Phone'}: +66 81-564-7994
+                {language === 'th' ? 'โทรศัพท์' : 'Phone'}: +66 81-564-7994 , +66 91-019-9179
               </p>
-              <p className="text-xs md:text-base text-blue-100 ml-8 md:ml-16">
-                +66 91-019-9179
-              </p>
+             
               <p className="text-xs md:text-base text-blue-100 mt-2">
-                {language === 'th' ? 'อีเมล' : 'Email'}: cc@rmu.ac.th
-              </p>
-              <p className="text-xs md:text-base text-blue-100 ml-8 md:ml-12">
-                cc@lives.rmu.ac.th
+                {language === 'th' ? 'อีเมล' : 'Email'}: cc@rmu.ac.th , cc@lives.rmu.ac.th
               </p>
               <p className="text-xs md:text-base text-blue-100 mt-2">
                 {language === 'th' ? 'เว็บไซต์' : 'Website'}: 

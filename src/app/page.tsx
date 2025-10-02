@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { FileText, Download, Calendar, Shield, Book, Mail, Phone, User, HelpCircle, FileCheck, Users, Globe, BarChart, Lock, ChevronDown, ChevronUp, ExternalLink, MessageSquare } from 'lucide-react';
+import Image from 'next/image';
 
 export default function PolicyCenter() {
   type Policy = {
@@ -137,11 +138,7 @@ export default function PolicyCenter() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3 md:gap-4">
               {/* University Logo */}
-              <img 
-                src="/100.png" 
-                alt="Logo มหาวิทยาลัยราชภัฏมหาสารคาม" 
-                className="w-12 h-12 md:w-16 md:h-16 object-contain"
-              />
+              
               {/* Shield Icon */}
               <div className="w-12 h-12 md:w-16 md:h-16 bg-green-700 rounded-lg flex items-center justify-center">
                 <Shield className="w-6 h-6 md:w-10 md:h-10 text-white" />
@@ -168,11 +165,13 @@ export default function PolicyCenter() {
           <div className="flex flex-col items-center">
             <div className="relative">
               <div className="absolute -inset-4 bg-green-100 rounded-full opacity-20"></div>
-              <img 
-                src="/100.png" 
-                alt="Logo มหาวิทยาลัยราชภัฏมหาสารคาม" 
-                className="relative w-32 h-32 md:w-48 md:h-48 object-contain mb-4"
-              />
+              <Image 
+  src="/100.png" 
+  alt="Logo มหาวิทยาลัยราชภัฏมหาสารคาม" 
+  width={192}
+  height={192}
+  className="w-32 h-32 md:w-48 md:h-48 object-contain mb-4"
+/>
             </div>
             <div className="text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-green-700 mb-2">
@@ -246,7 +245,7 @@ export default function PolicyCenter() {
             {Object.entries(t.tabs).map(([key, label]) => (
               <button
                 key={key}
-                onClick={() => setActiveTab(key as any)}
+                onClick={() => setActiveTab(key as 'policies' | 'faq' | 'forms' | 'contact' | 'guidelines' | 'resources')}
                 className={`flex-1 min-w-[120px] md:min-w-[140px] px-3 md:px-4 py-3 md:py-4 font-medium transition-colors text-xs md:text-base whitespace-nowrap ${
                   activeTab === key
                     ? 'bg-green-700 text-white'
@@ -957,17 +956,13 @@ export default function PolicyCenter() {
                 </strong>
               </p>
               <p className="text-xs md:text-base text-green-100">
-                {language === 'th' ? 'โทรศัพท์' : 'Phone'}: +66 81-564-7994
+                {language === 'th' ? 'โทรศัพท์' : 'Phone'}: +66 81-564-7994 , +66 91-019-9179
               </p>
-              <p className="text-xs md:text-base text-green-100 ml-8 md:ml-16">
-                +66 91-019-9179
-              </p>
+              
               <p className="text-xs md:text-base text-green-100 mt-2">
-                {language === 'th' ? 'อีเมล' : 'Email'}: cc@rmu.ac.th
+                {language === 'th' ? 'อีเมล' : 'Email'}: cc@rmu.ac.th , cc@lives.rmu.ac.th
               </p>
-              <p className="text-xs md:text-base text-green-100 ml-8 md:ml-12">
-                cc@lives.rmu.ac.th
-              </p>
+              
               <p className="text-xs md:text-base text-green-100 mt-2">
                 {language === 'th' ? 'เว็บไซต์' : 'Website'}: 
                 <a href="https://cc.rmu.ac.th" target="_blank" rel="noopener noreferrer" className="hover:underline ml-1">
